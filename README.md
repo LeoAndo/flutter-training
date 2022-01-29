@@ -42,3 +42,8 @@ ando@LeoAndonoMacBook-Pro ~ % flutter doctor -v
 ! Doctor found issues in 1 category.
 ando@LeoAndonoMacBook-Pro ~ % 
 ```
+
+# development memo
+
+https://github.com/LeoAndo/flutter-training/issues<br>
+https://github.com/LeoAndo/flutter-training/pulls?q=is%3Apr+is%3Aclosed<br>
