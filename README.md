@@ -47,3 +47,4 @@ ando@LeoAndonoMacBook-Pro ~ %
 
 https://github.com/LeoAndo/flutter-training/issues<br>
 https://github.com/LeoAndo/flutter-training/pulls?q=is%3Apr+is%3Aclosed<br>
+https://github.com/LeoAndo/flutter-training/wiki<br>
