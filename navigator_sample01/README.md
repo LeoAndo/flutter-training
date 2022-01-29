@@ -14,3 +14,10 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+## capture
+
+| iPhone 12 Pro 15.2 |
+|:---|
+|<img src="https://user-images.githubusercontent.com/16476224/151662165-93d32b8c-c64f-4d35-9ce5-6f1d82c51f55.gif" width=320 /> |
