@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
+  print("call main");
   runApp(const MyApp());
 }
 
@@ -52,6 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
+      print("call setState");
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
       // so that the display can reflect the updated values. If we changed
@@ -62,7 +64,38 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    print("call initState _MyHomePageState");
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    print("call didChangeDependencies _MyHomePageState");
+  }
+
+  @override
+  void didUpdateWidget(covariant MyHomePage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    print("call didUpdateWidget _MyHomePageState");
+  }
+
+  @override
+  void deactivate() {
+    super.deactivate();
+    print("call deactivate _MyHomePageState");
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    print("call dispose _MyHomePageState");
+  }
+
+  @override
   Widget build(BuildContext context) {
+    print("call build _MyHomePageState");
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
