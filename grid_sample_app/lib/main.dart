@@ -48,6 +48,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int _columnsCount = 2;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +60,9 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
           FloatingActionButton(
-            onPressed: () => {},
+            onPressed: () => {
+              if (_columnsCount < 4) {setState(() => _columnsCount++)}
+            },
             child: const Icon(
               Icons.grid_on,
               color: Colors.white,
@@ -68,7 +72,9 @@ class _MyHomePageState extends State<MyHomePage> {
             height: 16,
           ),
           FloatingActionButton(
-            onPressed: () => {},
+            onPressed: () => {
+              if (_columnsCount > 3) {setState(() => _columnsCount--)}
+            },
             child: const Icon(
               Icons.grid_off,
               color: Colors.white,
@@ -87,8 +93,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: _columnsCount,
             crossAxisSpacing: 20,
             mainAxisSpacing: 40,
           ),
