@@ -49,6 +49,25 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _columnsCount = 2;
+  final ScrollController _scrollController = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    print("call initState");
+    _scrollController.addListener(() {
+      setState(() {
+        print("call addListener setState");
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    print("call dispose");
+    _scrollController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           FloatingActionButton(
             onPressed: () => {
-              if (_columnsCount > 3) {setState(() => _columnsCount--)}
+              if (_columnsCount > 2) {setState(() => _columnsCount--)}
             },
             child: const Icon(
               Icons.grid_off,
@@ -84,7 +103,15 @@ class _MyHomePageState extends State<MyHomePage> {
             height: 16,
           ),
           FloatingActionButton(
-            onPressed: () => {},
+            onPressed: () => {
+              _scrollController
+                  .animateTo(
+                    0,
+                    duration: const Duration(milliseconds: 1000),
+                    curve: Curves.elasticInOut,
+                  )
+                  .then((value) => {print("scrolling finish!")})
+            },
             child: const Icon(
               Icons.arrow_upward,
               color: Colors.white,
@@ -93,6 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: GridView.builder(
+          controller: _scrollController,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: _columnsCount,
             crossAxisSpacing: 20,
