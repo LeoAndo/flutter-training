@@ -7,7 +7,7 @@ https://github.com/LeoAndo/flutter-training/wiki<br>
 
 # development environment
 
-i'm Used vscode!<br>
+i'm used vscode!<br>
 
 ```
 ando@LeoAndonoMacBook-Pro ~ % flutter doctor -v
