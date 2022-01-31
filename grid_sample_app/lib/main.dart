@@ -54,8 +54,37 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: const Text("Grid Sample"),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: <Widget>[
+          FloatingActionButton(
+            onPressed: () => {},
+            child: const Icon(
+              Icons.grid_on,
+              color: Colors.white,
+            ),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          FloatingActionButton(
+            onPressed: () => {},
+            child: const Icon(
+              Icons.grid_off,
+              color: Colors.white,
+            ),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          FloatingActionButton(
+            onPressed: () => {},
+            child: const Icon(
+              Icons.arrow_upward,
+              color: Colors.white,
+            ),
+          ),
+        ],
       ),
       body: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
