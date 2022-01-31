@@ -7,6 +7,8 @@ https://github.com/LeoAndo/flutter-training/wiki<br>
 
 # development environment
 
+i'm Used vscode!<br>
+
 ```
 ando@LeoAndonoMacBook-Pro ~ % flutter doctor -v
 [✓] Flutter (Channel stable, 2.8.1, on macOS 11.5.2 20G95 darwin-x64, locale ja-JP)
