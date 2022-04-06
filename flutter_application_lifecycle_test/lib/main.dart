@@ -1,7 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-void main() {
+void main() async {
   print("call main");
+  WidgetsFlutterBinding.ensureInitialized();
+  // 縦固定
+  await SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+
+  // 横固定
+  // await SystemChrome.setPreferredOrientations(
+  //     [DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight]);
+
+  // default: 縦横 両方対応 (明示的に指定しなくてもOK!)
+  // await SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,
+  //   DeviceOrientation.landscapeLeft,
+  //   DeviceOrientation.portraitDown,
+  //   DeviceOrientation.landscapeRight
+  // ]);
+
   runApp(const MyApp());
 }
 
