@@ -53,12 +53,12 @@ class _Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
     return Center(
       child: Column(
         children: <Widget>[
-          const SizedBox(
-            height: 60,
-          ),
+          const Spacer(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Text(
@@ -72,15 +72,11 @@ class _Body extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            height: 60,
-          ),
+          const Spacer(),
           FlutterLogo(
-            size: 240,
+            size: height * 0.3, //画面サイズの30パーセントを指定
           ),
-          const SizedBox(
-            height: 60,
-          ),
+          const Spacer(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Text(
@@ -93,9 +89,7 @@ class _Body extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            height: 60,
-          ),
+          const Spacer(),
           SizedBox(
             width: 300,
             height: 42,
@@ -125,9 +119,7 @@ class _Body extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            height: 60,
-          ),
+          const Spacer(),
         ],
       ),
     );
